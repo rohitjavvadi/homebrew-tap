@@ -1,6 +1,6 @@
 cask "quicktranscript" do
-  version "0.1.1"
-  sha256 "62bb6b272a000d5eab6e985f6a15c04eb27fc3fcc39f09e23df65209d85555ef"
+  version "0.1.2"
+  sha256 "b88d132e26697cedafe9297e69f7bae8da2506a9202d35e0e6a4f6b2fac1b466"
 
   url "https://github.com/rohitjavvadi/quicktranscript/releases/download/v#{version}/QuickTranscript.app.zip"
   name "QuickTranscript"
@@ -12,10 +12,6 @@ cask "quicktranscript" do
   app "QuickTranscript.app"
 
   postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/QuickTranscript.app"],
-                   sudo: false
-
     system_command "#{appdir}/QuickTranscript.app/Contents/Resources/setup_runtime.sh",
                    sudo: false
   end
