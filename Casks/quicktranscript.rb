@@ -1,6 +1,6 @@
 cask "quicktranscript" do
-  version "0.1.2"
-  sha256 "b88d132e26697cedafe9297e69f7bae8da2506a9202d35e0e6a4f6b2fac1b466"
+  version "0.1.3"
+  sha256 "1b5cecba9f225d221a76f0635ffc056eef2d3835594f164c5e30653788add055"
 
   url "https://github.com/rohitjavvadi/quicktranscript/releases/download/v#{version}/QuickTranscript.app.zip"
   name "QuickTranscript"
