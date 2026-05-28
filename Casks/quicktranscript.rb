@@ -12,6 +12,10 @@ cask "quicktranscript" do
   app "QuickTranscript.app"
 
   postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/QuickTranscript.app"],
+                   sudo: false
+
     system_command "#{appdir}/QuickTranscript.app/Contents/Resources/setup_runtime.sh",
                    sudo: false
   end
